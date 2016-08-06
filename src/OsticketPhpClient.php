@@ -8,6 +8,8 @@
  */
 namespace it\thecsea\osticket_php_client;
 
+use it\thecsea\osticket_php_client\requests\TicketRequest;
+
 class OsticketPhpClient
 {
     /**
@@ -25,10 +27,13 @@ class OsticketPhpClient
 
     /**
      * osticketPhpClient constructor.
+     * @param string $url
      * @param string $apiKey
      */
-    public function __construct($apiKey, $url)
+    public function __construct($url, $apiKey = '')
     {
+        if($apiKey == '')
+           $apiKey = getenv('OSTICKET_KEY');
         $this->apiKey = $apiKey;
         $this->url = $url;
         $this->client = new \GuzzleHttp\Client();
@@ -66,8 +71,56 @@ class OsticketPhpClient
         $this->url = $url;
     }
 
+    /**
+     * @return \GuzzleHttp\Client
+     */
+    public function getClient()
+    {
+        return $this->client;
+    }
 
+    /**
+     * @param \GuzzleHttp\Client $client
+     */
+    public function setClient(\GuzzleHttp\Client $client)
+    {
+        $this->client = $client;
+    }
+
+
+    /**
+     * @param string $path
+     * @param array $data
+     * @return mixed
+     * @throws OsticketPhpClientException
+     */
     public function request($path, $data){
-        //TODO ...
+        try {
+            $res = $this->client->request('POST', $this->url . '/' . $path, [
+                'json' => $data,
+                'headers' => [
+                    'User-Agent' => 'OsticketPhpClient/1.0',
+                    'Accept' => 'application/json',
+                    'Expect:' => 'X-API-Key: ' . $this->apiKey
+                ]
+            ]);
+
+        }catch(\Exception $e){
+            throw new OsticketPhpClientException("Request error: ".$e->getMessage(),0,$e);
+        }
+        if ($res->getStatusCode() != 200)
+            throw new OsticketPhpClientException("Server error: " . $res->getStatusCode());
+        try {
+            return \GuzzleHttp\json_decode($res->getBody(), true);
+        }catch(\Exception $e){
+            throw new OsticketPhpClientException("Error during parsing response",0,$e);
+        }
+    }
+
+    /**
+     * @return TicketRequest
+     */
+    public function newTicket(){
+        return new TicketRequest($this);
     }
 }

@@ -8,11 +8,14 @@ Rest php client for [osticket](http://osticket.com/)
 ## Features
 ### Ositcket features
 
-- [ ] Creation fo ticket
+- [x] Creation fo tickets
 - [ ] Attachments
 - [ ] Execution of cron
 
-### Other
+### Other/TODO
 - [ ] Unit tests
 - [ ] Laravel integration
 - [ ] Load data by env
+- [ ] PHP doc
+- [ ] Force HTTPS
+- [ ] Better HTTPS status code manage (for example 303 and other 2xx)
