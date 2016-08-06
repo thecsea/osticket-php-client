@@ -11,3 +11,4 @@ Rest php client for [osticket](http://osticket.com/)
 ### Other
 - [ ] Unit tests
 - [ ] Laravel integration
+- [ ] Load data by env

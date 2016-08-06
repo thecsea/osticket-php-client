@@ -97,5 +97,6 @@ fabric.properties
 # .idea/misc.xml 
 # *.ipr
 
-
+### COMPOSER ###
 /vendor/
+composer.lock
