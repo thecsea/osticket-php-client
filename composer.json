@@ -1,0 +1,26 @@
+{
+    "name": "thecsea/osticket-php-client",
+    "description": "Rest php client for osticket",
+    "minimum-stability": "stable",
+    "require": {
+        "php": "^7.0"
+    },
+    "keywords": ["rest","osticket", "client"],
+    "license": "GPL-3.0",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Claudio Cardinale",
+            "email": "cardi@thecsea.it",
+            "homepage": "http://thecsea.it"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "it\\thecsea\\osticket-php-client\\": "src/"
+        }
+    }
+}
