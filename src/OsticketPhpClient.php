@@ -30,10 +30,12 @@ class OsticketPhpClient
      * @param string $url
      * @param string $apiKey
      */
-    public function __construct($url, $apiKey = '')
+    public function __construct($url = '', $apiKey = '')
     {
         if($apiKey == '')
            $apiKey = getenv('OSTICKET_KEY');
+        if($url == '')
+            $url = getenv('OSTICKET_URL');
         $this->apiKey = $apiKey;
         $this->url = $url;
         $this->client = new \GuzzleHttp\Client();

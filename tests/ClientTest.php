@@ -37,6 +37,10 @@ class ClientTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('http://example.com', $this->client->getUrl());
     }
 
+    public function testUrlEnv(){
+        $this->assertEquals('http://example.com', (new \it\thecsea\osticket_php_client\OsticketPhpClient())->getUrl());
+    }
+
     public function testClient(){
         $mock = new \GuzzleHttp\Handler\MockHandler([
             new \GuzzleHttp\Psr7\Response(200, ['X-Foo' => 'Bar']),

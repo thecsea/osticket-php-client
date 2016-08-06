@@ -20,5 +20,6 @@
     </filter>
     <php>
         <env name="OSTICKET_KEY" value="AAAA"/>
+        <env name="OSTICKET_URL" value="http://example.com"/>
     </php>
 </phpunit>
