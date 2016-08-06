@@ -1,6 +1,6 @@
-# osticket--php-client
+# osticket-php-client
 
-Rest php client for osticket
+Rest php client for [osticket](http://osticket.com/)
 
 ## Features
 ### Ositcket features
