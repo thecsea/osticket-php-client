@@ -2,10 +2,6 @@
     "name": "thecsea/osticket-php-client",
     "description": "Rest php client for osticket",
     "minimum-stability": "stable",
-    "require": {
-        "php": "^7.0",
-        "guzzlehttp/guzzle": "^6.2"
-    },
     "keywords": ["rest","osticket", "client"],
     "license": "GPL-3.0",
     "type": "project",
@@ -17,7 +13,9 @@
         }
     ],
     "require": {
-        "php": ">=5.5.0"
+        "php": ">=5.5.0",
+        "guzzlehttp/guzzle": "^6.2"
+
     },
     "autoload": {
         "psr-4": {
