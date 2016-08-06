@@ -4,7 +4,7 @@
     "minimum-stability": "stable",
     "keywords": ["rest","osticket", "client"],
     "license": "GPL-3.0",
-    "type": "project",
+    "type": "library",
     "authors": [
         {
             "name": "Claudio Cardinale",
