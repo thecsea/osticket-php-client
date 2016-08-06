@@ -8,7 +8,7 @@
  */
 namespace it\thecsea\osticket_php_client;
 
-class osticketPhpClient
+class OsticketPhpClient
 {
     /**
      * @var \GuzzleHttp\Client
@@ -67,7 +67,7 @@ class osticketPhpClient
     }
 
 
-
-
-
+    public function request($path, $data){
+        //TODO ...
+    }
 }

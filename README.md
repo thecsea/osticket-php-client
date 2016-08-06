@@ -9,6 +9,7 @@ Rest php client for [osticket](http://osticket.com/)
 ### Ositcket features
 
 - [ ] Creation fo ticket
+- [ ] Attachments
 - [ ] Execution of cron
 
 ### Other
