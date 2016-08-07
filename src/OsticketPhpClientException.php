@@ -9,8 +9,6 @@
 namespace it\thecsea\osticket_php_client;
 
 
-use Exception;
-
 class OsticketPhpClientException extends \Exception
 {
 }
