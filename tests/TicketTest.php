@@ -87,7 +87,7 @@ class TicketTest extends \PHPUnit_Framework_TestCase
     public function testOkRequest(){
         $data = ['test'=>'pippo'];
         $mock = new \GuzzleHttp\Handler\MockHandler([
-            new \GuzzleHttp\Psr7\Response(200,[], json_encode($data)),
+            new \GuzzleHttp\Psr7\Response(201,[], json_encode($data)),
         ]);
         $handler = \GuzzleHttp\HandlerStack::create($mock);
         $client = new \GuzzleHttp\Client(['handler' => $handler]);

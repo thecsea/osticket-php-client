@@ -103,14 +103,15 @@ class OsticketPhpClient
                 'headers' => [
                     'User-Agent' => 'OsticketPhpClient/1.0',
                     'Accept' => 'application/json',
-                    'Expect:' => 'X-API-Key: ' . $this->apiKey
+                    'Expect' => '',
+                    'X-API-Key' => $this->apiKey
                 ]
             ]);
 
         }catch(\Exception $e){
             throw new OsticketPhpClientException("Request error: ".$e->getMessage(),0,$e);
         }
-        if ($res->getStatusCode() != 200)
+        if ($res->getStatusCode() != 201)
             throw new OsticketPhpClientException("Server error: " . $res->getStatusCode());
         try {
             return \GuzzleHttp\json_decode($res->getBody(), true);
