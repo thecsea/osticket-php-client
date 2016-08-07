@@ -54,6 +54,26 @@ class TicketTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($data, $ticket->getData());
     }
 
+
+    public function testWrongSettingOfDataViaSetter(){
+        $data = [
+            'name'=>'test',
+            'email' => 'test@test.com',
+            'phone' => '0123456789',
+            'subject' => 'subject',
+            'message' => 'message',
+            'topicId' => '1',
+            'ip' => '127.0.0.1',
+            'ipAAA' => '127.0.0.1'
+        ];
+        $ticket = $this->client->newTicket();
+        $this->assertNotEquals($data, $ticket->getData());
+        $ticket->withData($data);
+        $this->assertNotEquals($data, $ticket->getData());
+        unset($data['ipAAA']);
+        $this->assertEquals($data, $ticket->getData());
+    }
+
     public function testMethodInvalid(){
         $thrown = false;
         try {
