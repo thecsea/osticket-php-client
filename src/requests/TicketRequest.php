@@ -46,6 +46,16 @@ class TicketRequest
         return $this->data;
     }
 
+    /**
+     * @param $data
+     * @return $this
+     */
+    public function withData($data)
+    {
+        $this->data = $data;
+        return $this;
+    }
+
 
     /**
      * @param $name
