@@ -25,7 +25,7 @@ class TicketRequest extends Request
             'phone' 	=>		'',
             'subject'   =>      '',
             'message'   =>      '',
-            'ip'        =>      '127.0.0.1',//$_SERVER['REMOTE_ADDR'],
+            'ip'        =>      $_SERVER['SERVER_ADDR'],
             'topicId'   =>      ''));
     }
 
