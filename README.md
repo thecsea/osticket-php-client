@@ -21,3 +21,5 @@ Rest php client for [osticket](http://osticket.com/)
 - [ ] Better HTTPS status code manage (for example 303 and other 2xx)
 - [ ] Travis scrutinizer integration
 - [ ] Usage guide and wiki
+
+## Examples
