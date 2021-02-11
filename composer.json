@@ -1,28 +1,31 @@
 {
-    "name": "thecsea/osticket-php-client",
-    "description": "Rest php client for osticket",
-    "minimum-stability": "stable",
-    "keywords": ["rest","osticket", "client"],
-    "license": "GPL-3.0",
-    "type": "library",
-    "authors": [
-        {
-            "name": "Claudio Cardinale",
-            "email": "cardi@thecsea.it",
-            "homepage": "http://thecsea.it"
-        }
-    ],
-    "require": {
-        "php": ">=5.5.0",
-        "guzzlehttp/guzzle": "^6.2"
-
-    },
-    "require-dev":{
-        "phpunit/phpunit": "~4.0"
-    },
-    "autoload": {
-        "psr-4": {
-            "it\\thecsea\\osticket_php_client\\": "src/"
-        }
+  "name": "thecsea/osticket-php-client",
+  "description": "Rest php client for osticket",
+  "minimum-stability": "stable",
+  "keywords": [
+    "rest",
+    "osticket",
+    "client"
+  ],
+  "license": "GPL-3.0",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Claudio Cardinale",
+      "email": "cardi@thecsea.it",
+      "homepage": "http://thecsea.it"
     }
+  ],
+  "require": {
+    "php": ">=5.5.0",
+    "guzzlehttp/guzzle": "^7.2"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~4.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "it\\thecsea\\osticket_php_client\\": "src/"
+    }
+  }
 }
